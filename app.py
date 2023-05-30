@@ -54,4 +54,4 @@ if st.button("Upload Notes"):
 # Read notes from the file
 with open("notes.txt", "r") as file:
     for i, note in enumerate(file.readlines()):
-        st.write(f"{i + 1}. {note.strip()}")
+        st.write(f"{i + 1}. {note}")
