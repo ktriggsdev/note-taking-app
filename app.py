@@ -11,7 +11,8 @@ note_text = st.text_input("Enter your note text:")
 # Button to save the note
 if st.button("Save Note"):
     # Save the note to a list
-    notes.append(note_text)
+    notes_to_add = note_text.split("\n")
+    notes.extend(notes_to_add)
 
     # Save notes to a file
     with open("notes.txt", "w") as file:
