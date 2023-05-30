@@ -27,8 +27,14 @@ if st.button("Save Note"):
 if st.button("Download Notes"):
     # Download notes from the file
     with open("notes.txt", "r") as file:
-        for i, note in enumerate(file.readlines()):
-            st.write(f"{i + 1}. {note.strip()}")
+        notes_str = "".join(file.readlines())
+    notes_bytes = notes_str.encode()
+    st.download_button(
+        label="Download Notes",
+        data=notes_bytes,
+        file_name="notes.txt",
+        mime="text/plain"
+    )
 
 # Upload button
 if st.button("Upload Notes"):
@@ -46,3 +52,8 @@ if st.button("Upload Notes"):
         st.write("Notes:")
         for i, note in enumerate(notes):
             st.write(f"{i + 1}. {note}")
+
+# Read notes from the file
+with open("notes.txt", "r") as file:
+    for i, note in enumerate(file.readlines()):
+        st.write(f"{i + 1}. {note.strip()}")
