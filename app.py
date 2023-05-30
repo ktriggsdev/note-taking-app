@@ -23,9 +23,6 @@ if st.button("Save Note"):
     for i, note in enumerate(notes):
         st.write(f"{i + 1}. {note}")
 
-# Download button
-if st.button("Download Notes"):
-    # Download notes from the file
     with open("notes.txt", "r") as file:
         notes_str = "".join(file.readlines())
     notes_bytes = notes_str.encode()
