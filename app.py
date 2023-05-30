@@ -3,6 +3,8 @@ import os
 
 st.title("Notion.io")
 
+notes = []
+
 # Input text for the note
 note_text = st.text_input("Enter your note text:")
 
