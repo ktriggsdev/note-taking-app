@@ -8,7 +8,7 @@ note_text = st.text_input("Enter your note text:")
 # Button to save the note
 if st.button("Save Note"):
     # Save the note to a list
-    notes.append(note_text)
+    notes = notes.append(note_text)
     st.success("Note saved successfully!")
     st.write("Notes:")
     
