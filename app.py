@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Note.io")
 
-notes = ""
+notes = []
 
 # Input text for the note
 note_text = st.text_input("Enter your note text:")
